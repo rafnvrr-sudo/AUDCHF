@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: audchf-predictor
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: TWELVE_DATA_KEY
+        value: ce1a5b235266403388d14c60dfc0961e
+      - key: NODE_ENV
+        value: production
